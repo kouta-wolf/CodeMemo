@@ -5,4 +5,4 @@
 - 車輪の再開発ではあるけど気にしないでおく
 
 ### 使用予定の技術
-- Ruby, Rails, JavaScript, PostgreSQL
+- Ruby3.3.10, Rails8.1.1, JavaScript, PostgreSQL
