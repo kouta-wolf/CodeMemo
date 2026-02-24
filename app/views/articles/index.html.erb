@@ -1,4 +1,18 @@
 <h1>メモ一覧</h1>
+<%= form_with model: @article do |f| %>
+  <div>
+    <%= f.label :title, "タイトル" %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :content, "内容" %>
+    <%= f.text_area :content %>
+  </div>
+
+  <%= f.submit "保存する" %>
+<% end %>
+
 <% @articles.each do |article| %>
   <h2><%= link_to article.title, article_path(article.id) %></h2>
 <% end %>
