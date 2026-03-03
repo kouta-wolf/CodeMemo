@@ -1,16 +1,28 @@
-<h1>メモ一覧</h1>
 <%= form_with model: @article do |f| %>
-  <div>
+
+  <% if @article.errors.any? %>
+    <div style="color: red;">
+      <h3>入力に不備があります：</h3>
+      <ul>
+        <% @article.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
     <%= f.label :title, "タイトル" %>
     <%= f.text_field :title %>
   </div>
 
-  <div>
+  <div class="form-group">
     <%= f.label :content, "内容" %>
     <%= f.text_area :content %>
   </div>
-
-  <%= f.submit "保存する" %>
+  <div class="form-action">
+    <%= f.submit "保存する" %>
+  </div>
 <% end %>
 
 <% @articles.each do |article| %>
