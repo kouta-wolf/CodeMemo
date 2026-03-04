@@ -1,0 +1,23 @@
+<h1>カテゴリ管理</h1>
+<%= form_with model: @category do |f| %>
+
+  <div class="form-group">
+    <%= f.label :name, "新規カテゴリ名" %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="form-action">
+    <%= f.submit "保存する" %>
+  </div>
+<% end %>
+
+<hr>
+
+<h2>登録済みカテゴリ</h2>
+<ul>
+  <% @categories.each do |category| %>
+    <li><%= category.name %></li>
+  <% end %>
+</ul>
+
+<%= link_to "記事一覧に戻る", root_path %>
