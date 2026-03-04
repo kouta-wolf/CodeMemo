@@ -1,4 +1,5 @@
 <h1><%= @article.title %></h1>
+<p>言語：<%= @article.category&.name %></p>
 <p><%= @article.content %></p>
 <div class="actions">
   <%= link_to "編集", edit_article_path(@article) %>
