@@ -1,3 +1,5 @@
+<% content_for(:title, @article.title) %>
+
 <h1><%= @article.title %></h1>
 <p>言語：<%= @article.category&.name %></p>
 <p><%= @article.content %></p>
