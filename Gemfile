@@ -56,6 +56,9 @@ group :development, :test do
   # user_install
   # 日本語化
   gem "rails-i18n"
+
+  # 画像機能
+  gem "carrierwave"
 end
 
 group :development do
