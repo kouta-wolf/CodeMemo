@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      redirect_to root_path
+      redirect_to root_path, notice: "記事を保存しました"
     else
       @articles = Article.all
       render :index, status: :unprocessable_entity
@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article.destroy
-    redirect_to root_path, status: :see_other
+    redirect_to root_path, notice: "記事を削除しました", status: :see_other
   end
 
   def new
