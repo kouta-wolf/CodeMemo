@@ -5,7 +5,3 @@
   <%= link_to "編集", edit_article_path(@article) %>
   <%= link_to "削除", article_path(@article), data: { turbo_method: :delete, turbo_confirm: "本当に消しますか？" } %>
 </div>
-
-<div class="navigation", style="margin-top: 30px;">
-  <%= link_to "戻る", root_path %>
-</div>
