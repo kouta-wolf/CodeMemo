@@ -25,6 +25,11 @@
     <% end %>
   </div>
 
+  <div class="form-group">
+    <%= f.label "画像の投稿" %>
+    <%= f.file_field :image %>
+  </div>
+
   <div class="form-action">
     <%= f.submit "保存する" %>
   </div>

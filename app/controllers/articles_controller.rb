@@ -41,11 +41,15 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-    params.require(:article).permit(:title, :category_id, :content)
+    params.require(:article).permit(:title, :category_id, :content, :image)
   end
 
   def set_article
     @article = Article.find(params[:id])
+  end
+
+  def post_params
+    params.permit(:image, :content)
   end
 
 end
