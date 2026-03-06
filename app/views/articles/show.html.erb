@@ -2,7 +2,7 @@
 
 <h1><%= @article.title %></h1>
 <p>言語：<%= @article.category&.name %></p>
-<%= image_tag @article.image_url if @article.image? %>
+<%= image_tag @article.image.url, style: "max-width: 300px; height: auto;" if @article.image? %>
 <p><%= @article.content %></p>
 <div class="actions">
   <%= link_to "編集", edit_article_path(@article) %>
